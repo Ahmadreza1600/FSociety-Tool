@@ -1,6 +1,6 @@
 # FSociety Tool
 
-**Portable Multi-Function ESP8266 Tool Inspired by Flipper Zero**
+**Portable Multi-Function ESP8266 Tool**
 
 ---
 
@@ -144,4 +144,23 @@ Games
 ├── Pong
 └── Breakout
 
-About
+---
+
+# ℹ️ About
+
+FSociety Tool is a portable multi-function ESP8266 device inspired by Flipper Zero, featuring WiFi, RF 433 MHz, IR tools, OLED interface, EEPROM storage, and built-in games.
+
+---
+
+# 👤 Author
+
+**Ahmadreza**  
+**FSociety Tool v1.0**
+
+---
+
+# 📄 License
+
+Personal and Educational Use Only.
+
+© 2026 Ahmadreza
