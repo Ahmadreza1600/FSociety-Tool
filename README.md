@@ -81,16 +81,6 @@
 
 ---
 
-# 📦 Required Libraries
-
-- **Adafruit SSD1306**
-- **Adafruit GFX Library**
-- **ESP8266WiFi**
-- **rc-switch**
-- **IRremoteESP8266**
-
----
-
 # ⚡ Installation
 
 1. Open **web.esphome.io**
