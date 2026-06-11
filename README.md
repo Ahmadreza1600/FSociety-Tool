@@ -6,62 +6,13 @@
 
 # 🚀 Features
 
-## 📶 WiFi
-
-| **Feature** | **Description** |
-|------------|----------------|
-| **Scan** | Discover nearby WiFi networks |
-| **Select AP** | Choose a target from the scanned list |
-| **Attack (Deauth)** | Send deauthentication packets |
-| **Beacon Spam** | Broadcast fake WiFi networks |
-| **Graph** | Real-time signal strength graph |
-
-## 📡 RF 433 MHz
-
-| **Feature** | **Description** |
-|------------|----------------|
-| **Jammer** | RF noise generator |
-| **Read** | Capture and save RF codes |
-| **Send** | Replay saved RF codes |
-| **Delete** | Remove saved RF codes |
-| **Analyzer** | Live pulse analyzer |
-
-## 📺 Infrared (IR)
-
-| **Feature** | **Description** |
-|------------|----------------|
-| **TV-B-Gone** | Control TV power functions |
-| **Jammer** | Multi-protocol IR transmission |
-| **Read** | Capture and decode IR signals |
-| **Send** | Replay saved IR codes |
-| **Delete** | Remove saved IR codes |
-
-## 🎮 Other
-
-| **Feature** | **Description** |
-|------------|----------------|
-| **Evil Portal** | Captive portal testing tool |
-| **Pong** | Classic arcade game |
-| **Breakout** | Brick breaker game |
-| **About** | Creator information |
-| **Splash Screen** | Custom boot logo |
-| **EEPROM Storage** | Save RF and IR codes |
-
----
-
-# 🛠 Hardware Requirements
-
-| **Component** | **Description** |
-|-------------|---------------|
-| **ESP8266** | NodeMCU / Wemos D1 Mini |
-| **OLED 0.96" I2C** | 128×64 Display |
-| **433 MHz TX Module** | RF Transmission |
-| **433 MHz RX Module** | RF Reception |
-| **IR Receiver** | VS1838B / TSOP38238 |
-| **IR LED + 2N2222** | IR Transmission |
-| **3 Push Buttons** | Menu Navigation |
-
----
+| **Category** | **Available Functions** |
+|:------------|:------------------------|
+| **📶 WiFi** | Scan • Select AP • Attack • Beacon Spam • Graph |
+| **📡 RF 433 MHz** | Jammer • Read • Send • Delete • Analyzer |
+| **📺 Infrared (IR)** | TV-B-Gone • Jammer • Read • Send • Delete |
+| **🎮 Games** | Pong • Breakout |
+| **🛠 System** | Evil Portal • EEPROM Storage • Splash Screen • About |
 
 # 🔌 Wiring
 
