@@ -114,36 +114,6 @@
 
 ---
 
-# 📂 Menu Structure
-
-```text
-WiFi
-├── Scan
-├── Select AP
-├── Attack
-├── Beacon Spam
-└── Graph
-
-RF
-├── Jammer
-├── Read
-├── Send
-├── Delete
-└── Analyzer
-
-IR
-├── TV-B-Gone
-├── Jammer
-├── Read
-├── Send
-└── Delete
-
-Evil Portal
-
-Games
-├── Pong
-└── Breakout
-
 ---
 
 # ℹ️ About
