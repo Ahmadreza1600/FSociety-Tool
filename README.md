@@ -116,21 +116,16 @@
 
 ---
 
+---
+
 # ℹ️ About
 
-FSociety Tool is a portable multi-function ESP8266 device inspired by Flipper Zero, featuring WiFi, RF 433 MHz, IR tools, OLED interface, EEPROM storage, and built-in games.
+**FSociety Tool** was created and developed by **Ahmadreza**.
 
 ---
 
-# 👤 Author
+# ⚠️ Disclaimer
 
-**Ahmadreza**  
-**FSociety Tool v1.0**
+This project is intended for educational and research purposes only.
 
----
-
-# 📄 License
-
-Personal and Educational Use Only.
-
-© 2026 Ahmadreza
+The author is not responsible for any misuse, damage, or illegal activities resulting from the use of this software. Use it only on devices, systems, and networks that you own or have explicit permission to test.
