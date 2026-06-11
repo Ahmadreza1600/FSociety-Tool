@@ -1,138 +1,217 @@
+:::writing{variant="document" id="74192"}
+
 FSociety Tool
 
-A portable multi-function tool for ESP8266 with an OLED display, inspired by Flipper Zero.
-Includes WiFi Deauther, RF 433 MHz jammer & code reader, IR TV‑B‑Gone & jammer, Evil Portal, and built‑in games.
-
+<p align="center">
+  <img src="assets/logo.png" width="180" alt="FSociety Tool Logo">
+</p><p align="center">
+  <b>Portable Multi-Function ESP8266 Tool Inspired by Flipper Zero</b>
+</p><p align="center">
+  <img src="https://img.shields.io/badge/Platform-ESP8266-blue">
+  <img src="https://img.shields.io/badge/Display-OLED%20128x64-black">
+  <img src="https://img.shields.io/badge/Version-v1.0-green">
+  <img src="https://img.shields.io/badge/Status-Stable-success">
+</p>
 ---
 
 🚀 Features
 
-WiFi
+📶 WiFi
 
-· Scan – discover nearby WiFi networks.
-· Select AP – choose a target from the scanned list.
-· Attack (Deauth) – send deauthentication packets with a robust packet structure (web‑based format) to disconnect clients.
-· Beacon Spam – broadcast thousands of fake WiFi networks with a custom SSID.
-· Graph – real‑time signal strength bar chart (64 bars) across all 2.4 GHz channels.
+Feature	Description
 
-RF 433 MHz
+Scan	Discover nearby WiFi networks
+Select AP	Choose a target from the scanned list
+Attack (Deauth)	Send deauthentication packets
+Beacon Spam	Broadcast fake WiFi networks
+Graph	Real-time signal strength graph
 
-· Jammer – strong RF noise generator on the 433 MHz band.
-· Read – capture and save remote control codes (rc‑switch library).
-· Send – replay saved codes.
-· Delete – remove individual saved codes.
-· Analyzer – live pulse analyzer with 64 moving bars.
 
-IR (Infrared)
+📡 RF 433 MHz
 
-· TV‑B‑Gone – turn off/on over 100 TV models using stored power codes.
-· Jammer – aggressive multi‑protocol IR jammer (NEC, Sony, RC5, RC6, Panasonic, JVC + raw pulses).
-· Read – capture IR signals and decode common protocols.
-· Send / Delete – manage saved IR codes.
+Feature	Description
 
-Other
+Jammer	RF noise generator
+Read	Capture and save RF codes
+Send	Replay saved RF codes
+Delete	Remove saved RF codes
+Analyzer	Live pulse analyzer
 
-· Evil Portal – create a fake WiFi access point with a Google‑style phishing page; captured credentials are shown on the OLED.
-· Games – Pong and Breakout (Snake removed for performance).
-· About – displays creator information.
-· Splash Screen – custom bitmap displayed at boot.
-· Persistent Storage – RF and IR codes are saved in EEPROM.
+
+📺 Infrared (IR)
+
+Feature	Description
+
+TV-B-Gone	Control TV power functions
+Jammer	Multi-protocol IR transmission
+Read	Capture and decode IR signals
+Send	Replay saved IR codes
+Delete	Remove saved IR codes
+
+
+🎮 Other
+
+Feature	Description
+
+Evil Portal	Captive portal testing tool
+Pong	Classic arcade game
+Breakout	Brick breaker game
+About	Creator information
+Splash Screen	Custom boot logo
+EEPROM Storage	Save RF and IR codes
+
+
 
 ---
 
-🛠️ Hardware Requirements
+🛠 Hardware Requirements
 
-Component Description
-ESP8266 (NodeMCU, Wemos D1 Mini, etc.) main board
-OLED 0.96" I2C (128×64) display
-433 MHz transmitter module RF code transmission
-433 MHz receiver module RF code reception
-IR receiver (VS1838B / TSOP38238) IR signal capture
-IR LED + NPN transistor (2N2222) + 100 Ω resistor IR signal transmission
-3 push buttons menu navigation
+Component	Description
+
+ESP8266	NodeMCU / Wemos D1 Mini
+OLED 0.96" I2C	128×64 Display
+433 MHz TX Module	RF Transmission
+433 MHz RX Module	RF Reception
+IR Receiver	VS1838B / TSOP38238
+IR LED + 2N2222	IR Transmission
+3 Push Buttons	Menu Navigation
+
+
 
 ---
 
 🔌 Wiring
 
-Component ESP8266 Pin GPIO
-OLED SDA D2 4
-OLED SCL D1 5
-Button UP D5 14
-Button DOWN D6 12
-Button SELECT D7 13
-433 TX DATA D0 16
-433 RX DATA D4 2
-IR LED (via transistor) D8 15
-IR receiver OUT D3 0
+Component	Pin	GPIO
 
-All buttons use the internal pull‑up resistors; connect one side of each button to GND and the other to the corresponding GPIO.
+OLED SDA	D2	GPIO4
+OLED SCL	D1	GPIO5
+Button UP	D5	GPIO14
+Button DOWN	D6	GPIO12
+Button SELECT	D7	GPIO13
+RF TX	D0	GPIO16
+RF RX	D4	GPIO2
+IR LED	D8	GPIO15
+IR Receiver	D3	GPIO0
 
----
 
-📦 Required Libraries
-
-If you compile the code yourself, install these libraries via Arduino Library Manager:
-
-· Adafruit SSD1306
-· Adafruit GFX Library
-· ESP8266WiFi (built‑in)
-· rc‑switch
-· IRremoteESP8266
 
 ---
 
-⚡ Installation (Flashing the Binary)
+📦 Libraries
 
-A pre‑compiled firmware file (FSociety_Tool.bin) is provided – no Arduino IDE needed!
+Adafruit SSD1306
 
-1. Visit web.esphome.io (ESP Web Tools flasher).
-2. Connect your ESP8266 board to the computer via USB.
-3. Click “Connect” and select the correct serial port.
-4. In the firmware upload section, click “Choose File” and select the FSociety_Tool.bin file.
-5. Set the flash address to 0x0 (the default for ESP8266 binaries).
-6. Click “Program” and wait until the process finishes.
-7. After a successful flash, the device will reboot and display the splash screen for 2 seconds, then enter the main menu.
+Adafruit GFX Library
 
-(If you prefer to compile the source code yourself, use Arduino IDE with the required libraries and upload as usual.)
+ESP8266WiFi
 
----
+rc-switch
 
-🎮 Usage
+IRremoteESP8266
 
-Navigate the menu using the three buttons:
 
-· UP / DOWN – move through menu items.
-· SELECT – enter a submenu / start an action / go back (hold to exit active modes like Attack or Jammer).
-
-Menu Overview
-
-· WiFi → Scan → Select AP → Attack / Beacon Spam / Graph
-· RF → Jammer / Read / Send / Delete / Analyzer
-· IR → TV‑B‑Gone / Jammer / Read / Send / Delete
-· Evil Portal – starts a fake WiFi network; credentials appear on the OLED when submitted.
-· Games → Pong / Breakout
-· About – creator info.
 
 ---
 
-⚠️ Disclaimer
+⚡ Flash Firmware
 
-This tool is intended for educational purposes and authorized security testing only.
-You may only use it on devices and networks that you own or for which you have explicit written permission.
-Unauthorized use against third‑party networks or devices is illegal and the author assumes no responsibility for any misuse.
+1. Open web.esphome.io
+
+
+2. Connect ESP8266 via USB
+
+
+3. Click Connect
+
+
+4. Select FSociety_Tool.bin
+
+
+5. Flash Address: 0x0
+
+
+6. Click Program
+
+
+7. Wait for completion
+
+
+
+
+---
+
+🎮 Controls
+
+Button	Action
+
+UP	Navigate Up
+DOWN	Navigate Down
+SELECT	Confirm / Enter
+HOLD SELECT	Exit Current Mode
+
+
+
+---
+
+📂 Menu Structure
+
+WiFi
+ ├── Scan
+ ├── Select AP
+ ├── Attack
+ ├── Beacon Spam
+ └── Graph
+
+RF
+ ├── Jammer
+ ├── Read
+ ├── Send
+ ├── Delete
+ └── Analyzer
+
+IR
+ ├── TV-B-Gone
+ ├── Jammer
+ ├── Read
+ ├── Send
+ └── Delete
+
+Evil Portal
+
+Games
+ ├── Pong
+ └── Breakout
+
+About
+
+
+---
+
+⚠ Disclaimer
+
+This project is intended for educational purposes and authorized security testing only.
+
+Use only on devices and networks you own or have permission to test.
+
 
 ---
 
 👤 Author
 
 Ahmadreza
-Project: FSociety Tool v1.0
 
-“With great power comes great responsibility.”
+FSociety Tool v1.0
+
+> "With great power comes great responsibility."
+
+
+
 
 ---
 
 📄 License
 
-This project is released for personal and educational use. Redistribution or commercial use without permission is prohibited.
+Personal and Educational Use Only.
+
+All Rights Reserved. :::
