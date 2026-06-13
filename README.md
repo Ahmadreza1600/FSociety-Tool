@@ -70,3 +70,4 @@
 This project is intended for educational and research purposes only.
 
 The author is not responsible for any misuse, damage, or illegal activities resulting from the use of this software. Use it only on devices, systems, and networks that you own or have explicit permission to test.
+![Schematic](images/IMG_20260613_223846_602.png)
